@@ -55,4 +55,12 @@ poetry install
 
 ## Usage <a name = "usage"></a>
 
+Use Poetry to run the tests by executing the following command:
+
+```
+poetry run python -m unittest discover -s tests
+```
+
+This command will discover and run all tests located in the `tests` directory.
+
 

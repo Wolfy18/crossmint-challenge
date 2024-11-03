@@ -36,7 +36,7 @@ To install the project using Poetry, follow these steps:
 
 Clone the project repository to your local machine using Git:
 ```
-git clone https://github.com/your-username/crossmint-challenge.git
+git clone https://github.com/wolfy18/crossmint-challenge.git
 ```
 
 **Step 2: Navigate to the Project Directory**

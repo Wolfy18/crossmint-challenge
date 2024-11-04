@@ -33,6 +33,21 @@ class MegaverseAdapter:
             print("Unable to load megaverse from candidate")
 
         return megaverse
+    
+    def fetch_goal(self) -> List[List[Optional[Dict[str, int]]]]:
+        megaverse = [[]]
+        try:
+            req = requests.get(
+                f"{self.api}/map/{self.candidate_id}/goal", headers=self.headers)
+
+            if req.status_code not in [200]:
+                req.raise_for_status()
+
+            megaverse = req.json()["goal"]
+        except:
+            print("Unable to load megaverse goal from candidate")
+
+        return megaverse
 
     def insert_astral_object(self, obj: Union[POLYanet, SOLoon, ComETH, object]) -> Dict[str, bool]:
         response: Dict[str, bool] = {"success": False}

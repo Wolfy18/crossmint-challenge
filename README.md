@@ -36,7 +36,7 @@ To install the project using Poetry, follow these steps:
 
 Clone the project repository to your local machine using Git:
 ```
-git clone https://github.com/wolfy18/crossmint-challenge.git
+git clone https://github.com/Wolfy18/crossmint-challenge.git
 ```
 
 **Step 2: Navigate to the Project Directory**
@@ -58,7 +58,7 @@ poetry install
 Use Poetry to run the tests by executing the following command:
 
 ```
-poetry run python -m unittest discover -s tests
+poetry run python -m unittest discover -s tests -v
 ```
 
 This command will discover and run all tests located in the `tests` directory.

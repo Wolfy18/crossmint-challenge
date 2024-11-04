@@ -71,8 +71,14 @@ poetry shell
 ```
 Once in the Poetry shell, run 
 
+Phase 1 Challenge
 ```
 python phase1.py
+```
+
+Phase 2 Challenge
+```
+python phase2.py
 ```
 
 ### Sample case

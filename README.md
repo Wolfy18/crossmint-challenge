@@ -56,6 +56,13 @@ Use Poetry to install the project dependencies:
 poetry install
 ```
 
+**Step 4: Set candidate ID**
+
+Create an *.env* file from the .env.sample and update the variable value
+```
+cat .env.sample > .env
+```
+
 ## Usage <a name = "usage"></a>
 
 To run the script, first start the Poetry shell by executing the following command:
@@ -65,7 +72,7 @@ poetry shell
 Once in the Poetry shell, run 
 
 ```
-python ./phase1.py
+python phase1.py
 ```
 
 ### Sample case
@@ -86,7 +93,7 @@ poly = POLYanet({"row": 0, "column": 0}) # Create model instance
 
 adapter.insert_astral_object(poly) # http POST request to set the object into the megaverse.
 
-adapter.megaverse = adapter.fetch_map() # Sets the phase1 challenge (X shape) megaverse to the adapter
+adapter.megaverse = adapter.fetch_map() # Set the current user's megaverse to the adapter.
 
 ```
 

@@ -34,7 +34,7 @@ class MegaverseAdapter:
 
         return megaverse
 
-    def insert_astral_object(self, obj: Union[POLYanet, SOLoon, ComETH, object]):
+    def insert_astral_object(self, obj: Union[POLYanet, SOLoon, ComETH, object]) -> Dict[str, bool]:
         response: Dict[str, bool] = {"success": False}
         endpoint: Union[str, None] = None
 
@@ -61,7 +61,7 @@ class MegaverseAdapter:
         response["success"] = True
         return response
 
-    def delete_astral_object(self, obj: Union[POLYanet, SOLoon, ComETH, object]):
+    def delete_astral_object(self, obj: Union[POLYanet, SOLoon, ComETH, object]) -> Dict[str, bool]:
         response: Dict[str, bool] = {"success": False}
         endpoint: Union[str, None] = None
 

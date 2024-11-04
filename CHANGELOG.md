@@ -2,6 +2,8 @@
 
 ### Feat
 
+- added dotenv package to set the secret candidate id
+- **added-seeds-foldder**: added seeds folder for each challenge phase
 - developed api adapter that communicates to the megaverse api
 - added tests and updated gitignore file to skip temp files
 - **api.py**: added megaverse api adapter

@@ -81,9 +81,6 @@ Sample case to insert one POLYanet
 
 ```python
 
-import json
-import time
-
 from crossmint_challenge.models import POLYanet
 from crossmint_challenge.api import MegaverseAdapter
 
@@ -94,6 +91,8 @@ poly = POLYanet({"row": 0, "column": 0}) # Create model instance
 adapter.insert_astral_object(poly) # http POST request to set the object into the megaverse.
 
 adapter.megaverse = adapter.fetch_map() # Set the current user's megaverse to the adapter.
+
+adapter.delete_astral_object(poly) # http POST request to delete the object into the megaverse.
 
 ```
 

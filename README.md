@@ -83,7 +83,7 @@ python phase2.py
 
 ### Sample case
 
-Sample case to insert one POLYanet
+Sample case to insert and delete one POLYanet
 
 ```python
 
@@ -98,7 +98,7 @@ adapter.insert_astral_object(poly) # http POST request to set the object into th
 
 adapter.megaverse = adapter.fetch_map() # Set the current user's megaverse to the adapter.
 
-adapter.delete_astral_object(poly) # http POST request to delete the object into the megaverse.
+adapter.delete_astral_object(poly) # http DELETE request to delete the object into the megaverse.
 
 ```
 

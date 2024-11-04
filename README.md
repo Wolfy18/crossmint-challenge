@@ -10,13 +10,8 @@ The challenge is composed of 2 phases. In the first one you will learn how to in
 
 ## Table of Contents
 
-- [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
-
-## About <a name = "about"></a>
-
-Megaverses are 2D spaces comprised of combinations of different astral objects: 🪐POLYanets with 🌙SOLoons around them and ☄comETHs floating around.
 
 ## Getting Started <a name = "getting_started"></a>
 
@@ -63,7 +58,19 @@ poetry install
 
 ## Usage <a name = "usage"></a>
 
-Phase 1 python script
+To run the script, first start the Poetry shell by executing the following command:
+```
+poetry shell
+```
+Once in the Poetry shell, run 
+
+```
+python ./phase1.py
+```
+
+### Sample case
+
+Sample case to insert one POLYanet
 
 ```python
 
@@ -71,27 +78,19 @@ import json
 import time
 
 from crossmint_challenge.models import POLYanet
-from crossmin_challenge.api import MegaverseAdapter
-
+from crossmint_challenge.api import MegaverseAdapter
 
 adapter = MegaverseAdapter("candidate_id")
 
-data = None
+poly = POLYanet({"row": 0, "column": 0}) # Create model instance
 
-with open("./seeds/phase1.json") as f:
-    data = json.loads(f.read())
-
-for obj in data:
-    poly = POLYanet(**obj) # Create a model instance.
-
-    time.sleep(2) # It avoids 429 Too Many Requests Http error.
-
-    adapter.insert_astral_object(poly) # http POST request to set the object into the megaverse.
+adapter.insert_astral_object(poly) # http POST request to set the object into the megaverse.
 
 adapter.megaverse = adapter.fetch_map() # Sets the phase1 challenge (X shape) megaverse to the adapter
 
 ```
 
+### Tests
 
 Use Poetry to run the tests by executing the following command:
 
